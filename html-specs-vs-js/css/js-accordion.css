@@ -1,0 +1,38 @@
+.js-accordion__content {
+    height: auto;
+    overflow: hidden;
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.js-accordion.is-open .js-accordion__content {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    max-height: 100rem;
+}
+
+.js-accordion__container {
+    list-style-type: none;
+    padding: 0;
+}
+
+.js-accordion__button {
+    background: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.js-accordion__button:hover {
+    background: none;
+}
+
+.js-accordion__icon {
+    font-size: 32px;
+    line-height: 0;
+    height: 6px;
+    display: inline-block;
+}

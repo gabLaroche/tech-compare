@@ -8,7 +8,7 @@
 
     function showModal() {
         jsDialog.classList.remove("hidden");
-        document.getElementById("jsDialogContent").focus();
+        jsCloseBtn.focus();
     }
 
     function close() {

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+    <link href="css/js-dialog.css" rel="stylesheet">
+</head>
+<body>
+<main>
+    <h1>HTML5 vs Vanilla JS</h1>
+    <p>This Comparision is best viewed in a modern browser</p>
+    <div>
+        <h2>Accordion</h2>
+        <div>
+            <h3>HTML5 Accordion</h3>
+            <details>
+                <summary>the <code>&lt;details&gt;</code> element is the container</summary>
+                The <code>&lt;summary&gt;</code> is the title and what's under the <code>&lt;summary&gt;</code> element is the content
+            </details>
+            <details>
+                <summary>Advantages of this method</summary>
+                <ul>
+                    <li>Easy to implement</li>
+                    <li>Accessible out of the box</li>
+                    <li>Works on most browsers</li>
+                    <li>You can customize the arrow</li>
+                </ul>
+            </details>
+            <details>
+                <summary>disadvantages of this method</summary>
+                <ul>
+                    <li>There's no way of animating these for now</li>
+                </ul>
+            </details>
+        </div>
+        <div>
+            <h3>Vanilla JS Accordion</h3>
+            <ul>
+                <li>
+                    <div class="js-accordion">
+                        <button class="js-accordion__button" aria-expanded="false" aria-controls="section-lorem-ipsum">
+                            <span class="js-accordion__icon" aria-hidden="true">&rtrif;</span>
+                            <span class="js-accordion__title">This is a Javascript solution</span>
+                        </button>
+                        <div class="js-accordion__content" aria-hidden="true">
+                            <div class="js-accordion__description">And this is its content</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="js-accordion">
+                        <button class="js-accordion__button" aria-expanded="false" aria-controls="section-lorem-ipsum">
+                            <span class="js-accordion__icon" aria-hidden="true">&rtrif;</span>
+                            <span class="js-accordion__title">Advantages</span>
+                        </button>
+                        <div class="js-accordion__content" aria-hidden="true">
+                            <ul class="js-accordion__description">
+                                <li>
+                                    You can animate it
+                                </li>
+                                <li>
+                                    More control over the behaviour
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="js-accordion">
+                        <button class="js-accordion__button" aria-expanded="false" aria-controls="section-lorem-ipsum">
+                            <span class="js-accordion__icon" aria-hidden="true">&rtrif;</span>
+                            <span class="js-accordion__title">Disadvantages</span>
+                        </button>
+                        <div class="js-accordion__content" aria-hidden="true">
+                            <ul class="js-accordion__description">
+                                <li>
+                                    Adds Javascript to the page
+                                </li>
+                                <li>
+                                    More work to make it accessible
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div>
+        <h2>Dialog</h2>
+        <div>
+            <h3>HTML5 Dialog</h3>
+            <dialog id="htmlDialog">
+                <p>This is an HTML5 dialog using the <code>&lt;dialog&gt;</code> element</p>
+                <button id="htmlCloseBtn">Close</button>
+            </dialog>
+            <button id="htmlOpenBtn">Open</button>
+        </div>
+        <div>
+            <h3>Vanilla JS Dialog</h3>
+            <!-- <div id="jsDialog" class="hidden">
+                <div class="dialog" id="jsDialogContent" tabindex="0">
+                    <p>This is a Vanilla JS dialog</p>
+                    <button id="jsCloseBtn">Close</button>
+                    <div tabindex="0"></div>
+                </div>
+            </div>
+            <button id="jsOpenBtn">Open</button> -->
+            <button onclick="openDialog('dialog1', this)">
+                Add Delivery Address
+            </button>
+            <div role="dialog"
+                 id="dialog1"
+                 aria-labelledby="dialog1_label"
+                 aria-modal="true"
+                 class="hidden">
+                <h2 id="dialog1_label" class="dialog_label">
+                    Add Delivery Address
+                </h2>
+                <div class="dialog_form">
+                    <p>This is a Vanilla JS dialog</p>
+                    <div class="dialog_form_actions">
+                        <button onclick="closeDialog(this)">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="js/js-accordion.js" type="text/javascript"></script>
+    <script src="js/html-dialog.js" type="text/javascript"></script>
+    <script src="js/js-dialog.js" type="text/javascript"></script>
+</main>
+</body>
+</html>
